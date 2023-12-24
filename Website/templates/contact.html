@@ -1,0 +1,52 @@
+{% extends "index.html" %} {% block title %}Contact{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+{%block content%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+</head>
+
+<body>
+    <main class="container">
+        <div>
+            <h1>Contact</h1>
+            <div class="social-icons">
+
+                <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook-f"><img
+                            src="Facebook.png" alt=""></i></a>
+                <a href="https://twitter.com/" class="social-icon"><i class="fab fa-twitter"><img src="Twitter.png"
+                            alt=""></i></a>
+                <a href="https://www.instagram.com/" class="social-icon"><i class="fab fa-instagram"><img
+                            src="Instagram.png" alt=""></i></a>
+                <a href="https://web.whatsapp.com/" class="social-icon"><i class="fab fa-whatsapp"><img
+                            src="Whatsapp.png" alt=""></i></a>
+            </div>
+            <p>If you have any questions or inquiries, please use the form below to get in touch with us.</p>
+        </div>
+
+        <form id="contactForm" method="post">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button> <br>
+
+        </form>
+    </main>
+
+</body>
+{%endblock%}
+
+</html>

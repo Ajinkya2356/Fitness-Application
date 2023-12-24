@@ -1,0 +1,106 @@
+{% extends "index.html" %} 
+{%block content%}
+
+<head>
+        <title>{% block title %}Login{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-dark">
+        
+        <form method="post">
+                <div class="container rounded  mt-5 mb-5">
+                        <div class="row">
+                                
+                                <div class="col-md-5">
+                                        <div class="p-3 py-5">
+                                                {%if user_info%}
+                                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                                        <h4 class="text-right">Profile Settings</h4>
+                                                </div>
+                                                <div class="row mt-2">
+                                                        <div class="col-md-6"><label class="labels">Name</label><input
+                                                                        type="text" class="form-control" name="fname"
+                                                                        value='{{user_info.First_Name}}' required></div>
+                                                        <div class="col-md-6"><label
+                                                                        class="labels">Surname</label><input type="text"
+                                                                        class="form-control" value='{{user_info.Last_Name}}' name="lname"
+                                                                        required></div>
+                                                </div>
+                                                
+                                                <div class="row mt-3">
+                                                        <div class="col-md-12 mb-3"><label class="labels">Mobile
+                                                                        Number</label><input type="number"
+                                                                        class="form-control" name="num" value="{{user_info.Mobile}}"
+                                                                        required>
+                                                        </div>
+
+                                                        <div class="col-md-12 mb-3"><label class="labels">Address Line
+                                                                        1</label><input type="text" class="form-control"
+                                                                        value="{{user_info.Address}}" name="address">
+                                                                <br>
+                                                                <div class="col-md-12 mb-3"><label
+                                                                                class="labels">Postcode</label><input
+                                                                                type="number" class="form-control"
+                                                                                value="{{user_info.Postcode}}" name="postcode"></div>
+                                                                
+                                                                <div class="col-md-12 mb-3"><label class="labels">Email
+                                                                                ID</label><input type="email"
+                                                                                class="form-control" value="{{user_info.Email}}"
+                                                                                name="email" required></div>
+                                                        </div>
+
+
+
+                                                        <div class="col-md-12 mb-3"><label
+                                                                        class="labels">Weight</label><input type="number"
+                                                                        name="weight" class="form-control" 
+                                                                        value="{{user_info.Weight}}" required></div>
+                                                        <br>
+                                                        <div class="col-md-12 mb-3"><label
+                                                                        class="labels">Height</label><input type="number"
+                                                                        class="form-control" name="height" value="{{user_info.Height}}"
+                                                                        required>
+                                                        </div>
+                                                        <br>
+                                                        <div class="col-md-12 mb-3"><label class="labels">Maintanance
+                                                                        Calories</label><input type="number"
+                                                                        class="form-control" value="{{user_info.M_calories}}" name="mainc"
+                                                                        required></div>
+                                                        <br>
+                                                        <div class="select">
+                                                                Workout Intensity
+                                                                <select name="intensity" id="" type="text" value="{{user_info.Intensity}}">
+                                                                        <option value="Low">Low</option>
+                                                                        <option value="High">High</option>
+                                                                        <option value="Moderate">Moderate</option>
+                                                                </select>
+                                                        </div>
+                                                        <br>
+                                                </div>
+                                                {%endif%}
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Save
+                                        Profile</button>
+
+                        </div>
+                </div>
+
+        </form>
+
+        <script>
+                var loadFile = function (event) {
+                        var image = document.getElementById("output");
+                        image.src = URL.createObjectURL(event.target.files[0]);
+
+                };
+        </script>
+</body>
+{%endblock%}

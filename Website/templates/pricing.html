@@ -1,0 +1,305 @@
+{% extends "index.html" %} {% block title %}Pricing{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+{%block content%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pricing.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+</head>
+
+<body>
+    <section class="pricing-section">
+        <div class="plans-container">
+            <div class="plan-card">
+                <h3>1. Basic Plan - Starter</h3>
+                <img src="static/img/card1.webp" alt="">
+                <ul>
+
+                    <li><i class="bi bi-x-diamond-fill"></i>Price: $29.99/month </li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Access to the gym during off-peak hours</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Personalized diet plan</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>10% discount on all merchandise</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Perfect for beginners who want to kickstart their fitness
+                        journey under professional guidance</li>
+                </ul>
+                <p class="price">$29.99/month</p>
+                {% if user.is_authenticated %}
+                {% if user.is_authenticated %}
+                <button class="join-btn">Join Now</button>
+                {%else%}
+                <button class="join-btn" onclick="show()">Join Now</button>
+                <script>
+                function show()
+                {
+                    alert("Log in first");
+                }</script>
+                {%endif%}
+                {%else%}
+                <button class="join-btn" onclick="show()">Join Now</button>
+                <script>
+                function show()
+                {
+                    alert("Log in first");
+                }</script>
+                {%endif%}
+            </div>
+            <div class="plan-card">
+                <h3>2. Premium Plan - Pro</h3>
+                <img src="static/img/card2.avif" alt="">
+                <ul>
+                    <li><i class="bi bi-x-diamond-fill"></i>Price: $49.99/month</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>24/7 gym access</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Customized workout routine with regular progress tracking
+                    </li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Two complimentary sessions with a personal trainer per month
+                    </li>
+                    <li><i class="bi bi-x-diamond-fill"></i>15% discount on all merchandise</li>
+                </ul>
+                <p class="price">$49.99/month</p>
+                {% if user.is_authenticated %}
+                <button class="join-btn">Join Now</button>
+                {%else%}
+                <button class="join-btn" onclick="show()">Join Now</button>
+                <script>
+                function show()
+                {
+                    alert("Log in first");
+                }</script>
+                {%endif%}
+            </div>
+            <div class="plan-card">
+                <h3>3. Ultimate Plan - Elite</h3>
+                <img src="static/img/card3.avif" alt="">
+                <ul>
+                    <li><i class="bi bi-x-diamond-fill"></i>Price: $79.99/month</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Priority scheduling for personal training sessions</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Unlimited access to group fitness classes</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Tailored workout routine with weekly progress tracking</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Four complimentary sessions with a personal trainer per
+                        month</li>
+                </ul>
+                <p class="price">$79.99/month</p>
+                {% if user.is_authenticated %}
+                <button class="join-btn">Join Now</button>
+                {%else%}
+                <button class="join-btn" onclick="show()">Join Now</button>
+                <script>
+                function show()
+                {
+                    alert("Log in first");
+                }</script>
+                {%endif%}
+            </div>
+            <div class="plan-card">
+                <h3>4. Couple's Plan - Together We Grow</h3>
+                <img src="static/img/card4.avif" alt="">
+                <ul>
+                    <li><i class="bi bi-x-diamond-fill"></i>Price: $99.99/month</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>24/7 gym access for two individuals</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Personalized diet plans for both with monthly revisions</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>One complimentary session with a personal trainer for each individual per month</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>15% discount on all merchandise</li>
+                </ul>
+                <p class="price">$99.99/month</p>
+                {% if user.is_authenticated %}
+                <button class="join-btn">Join Now</button>
+                {%else%}
+                <button class="join-btn" onclick="show()">Join Now</button>
+                <script>
+                function show()
+                {
+                    alert("Log in first");
+                }</script>
+                {%endif%}
+            </div>
+            <div class="plan-card">
+                <h3>5. Family Plan - Fitness for All</h3>
+                <img src="static/img/card5.avif" alt="">
+                <ul>
+                    <li><i class="bi bi-x-diamond-fill"></i>Price: $149.99/month</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Complimentary fitness assessments for all members</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Personalized diet plans for all with monthly revisions</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Customized workout routines for all with regular progress tracking</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>20% discount on all merchandise</li>
+                </ul>
+                <p class="price">$149.99/month</p>
+                {% if user.is_authenticated %}
+                <button class="join-btn">Join Now</button>
+                {%else%}
+                <button class="join-btn" onclick="show()">Join Now</button>
+                <script>
+                function show()
+                {
+                    alert("Log in first");
+                }</script>
+                {%endif%}
+            </div>
+            <div class="plan-card">
+                <h3>6. Weight Loss Plan - Shed & Shape</h3>
+                <img src="static/img/card6.avif" alt="">
+                <ul>
+                    <li><i class="bi bi-x-diamond-fill"></i>Price: $39.99/month</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>One-on-one consultation with a weight loss specialist</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Personalized calorie-controlled diet plan</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Intensive fat-burning workout routine</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>10% discount on weight loss supplements</li>
+                </ul>
+                <p class="price">$39.99/month</p>
+                {% if user.is_authenticated %}
+                <button class="join-btn">Join Now</button>
+                {%else%}
+                <button class="join-btn" onclick="show()">Join Now</button>
+                <script>
+                function show()
+                {
+                    alert("Log in first");
+                }</script>
+                {%endif%}
+            </div>
+            <div class="plan-card">
+                <h3>7. Muscle Building Plan - Power Gainz</h3>
+                <img src="static/img/card7.avif" alt="">
+                <ul>
+                    <li><i class="bi bi-x-diamond-fill"></i>Price: $44.99/month</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Body composition analysis and muscle gain consultation</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Strength-focused workout routine with emphasis on progressive overload</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Bi-weekly progress tracking and workout adjustments</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>10% discount on muscle-building supplements</li>
+                </ul>
+                <p class="price">$44.99/month</p>
+                {% if user.is_authenticated %}
+                <button class="join-btn">Join Now</button>
+                {%else%}
+                <button class="join-btn" onclick="show()">Join Now</button>
+                <script>
+                function show()
+                {
+                    alert("Log in first");
+                }</script>
+                {%endif%}
+            </div>
+            <div class="plan-card">
+                <h3>8. Flexibility & Balance Plan - Zen Flow</h3>
+                <img src="static/img/card8.avif" alt="">
+                <ul>
+                    <li><i class="bi bi-x-diamond-fill"></i>Price: $34.99/month</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Access to yoga and pilates classes</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Mindfulness session with a certified instructor</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Weekly guided meditation sessions</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Personalized flexibility and balance-focused workout routine</li>
+                </ul>
+                <p class="price">$34.99/month</p>
+                {% if user.is_authenticated %}
+                <button class="join-btn">Join Now</button>
+                {%else%}
+                <button class="join-btn" onclick="show()">Join Now</button>
+                <script>
+                function show()
+                {
+                    alert("Log in first");
+                }</script>
+                {%endif%}
+            </div>
+            <div class="plan-card">
+                <h3>9. HIIT Plan - Ignite & Intensify</h3>
+                <img src="static/img/card9.avif" alt="">
+                <ul>
+                    <li><i class="bi bi-x-diamond-fill"></i>Price: $49.99/month</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>HIIT (High-Intensity Interval Training) introductory workshop</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Personalized high-energy HIIT workout routine</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Regular HIIT challenges and competitions</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>15% discount on HIIT gear and accessories</li>
+                </ul>
+                <p class="price">$49.99/month</p>
+                {% if user.is_authenticated %}
+                <button class="join-btn">Join Now</button>
+                {%else%}
+                <button class="join-btn" onclick="show()">Join Now</button>
+                <script>
+                function show()
+                {
+                    alert("Log in first");
+                }</script>
+                {%endif%}
+            </div>
+            <div class="plan-card">
+                <h3>10. Corporate Wellness Plan - Team Boost</h3>
+                <img src="static/img/card10.jpg" alt="">
+                <ul>
+                    <li><i class="bi bi-x-diamond-fill"></i>Price: Contact us for custom pricing</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Tailored plans for corporate groups</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Nutritional workshops and seminars</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Dedicated corporate account manager</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Fitness Seminars and Workshops</li>
+                </ul>
+                <p class="price">$/month</p>
+                {% if user.is_authenticated %}
+                <button class="join-btn">Join Now</button>
+                {%else%}
+                <button class="join-btn" onclick="show()">Join Now</button>
+                <script>
+                function show()
+                {
+                    alert("Log in first");
+                }</script>
+                {%endif%}
+            </div>
+            <div class="plan-card">
+                <h3>11. Seniors' Plan - Age with Grace</h3>
+                <img src="static/img/card11.jpg" alt="">
+                <ul>
+                    <li><i class="bi bi-x-diamond-fill"></i>Price: $24.99/month</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Access to seniors' fitness classes</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Low-impact workout routines designed for older adults</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Social activities and group outings</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>10% discount on seniors' fitness gear</li>
+                </ul>
+                <p class="price">$24.99/month</p>
+                {% if user.is_authenticated %}
+                <button class="join-btn">Join Now</button>
+                {%else%}
+                <button class="join-btn" onclick="show()">Join Now</button>
+                <script>
+                function show()
+                {
+                    alert("Log in first");
+                }</script>
+                {%endif%}
+            </div>
+            <div class="plan-card">
+                <h3>12. Online Training Plan - Anywhere, Anytime</h3>
+                <img src="static/img/card12.jpg" alt="">
+                <ul>
+                    <li><i class="bi bi-x-diamond-fill"></i>Price: $19.99/month</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Access to our online training platform</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Virtual fitness assessment and goal-setting session</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Live group workout sessions with certified trainers</li>
+                    <li><i class="bi bi-x-diamond-fill"></i>Monthly progress reviews and adjustments</li>
+                </ul>
+                <p class="price">$19.99/month</p>
+                {% if user.is_authenticated %}
+                <button class="join-btn">Join Now</button>
+                {%else%}
+                <button class="join-btn" onclick="show()">Join Now</button>
+                <script>
+                function show()
+                {
+                    alert("Log in first");
+                }</script>
+                {%endif%}
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+</body>
+{%endblock%}
+
+</html>

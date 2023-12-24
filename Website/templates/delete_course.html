@@ -1,0 +1,10 @@
+<!-- delete_course.html -->
+<h1>Admin Interface - Delete Course</h1>
+
+<p>Are you sure you want to delete the course "{{ course.title }}"?</p>
+
+<form method="POST" action="{{ url_for('auth.delete_course', course_id=course.id) }}">
+  <input type="submit" value="Delete">
+</form>
+
+<a href="{{ url_for('auth.courses') }}">Cancel</a>

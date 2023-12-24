@@ -1,0 +1,89 @@
+{% extends "index.html" %} {% block title %}Chest{% endblock %}
+<!DOCTYPE html>
+<html>
+
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHEST WORKOUT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='chest.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <!-- <a href="{{url_for('views.chestBODY')}}">BODY</a>
+             <button type="submit"
+                onclick=url_for("chestBODY")>Body</button> -->
+            <!-- <a href="{{url_for('views.leftchest)}}">Dumbell</a>
+            <a href="{{url_for('views.chestSTR')}}">Streching</a>  -->
+            <!-- <button type="submit"
+                onclick="window.location.href= 'http://127.0.0.1:5500/chest/chestBODY.html';">Body</button>
+            <button type="submit"
+                onclick="window.location.href= 'http://127.0.0.1:5500/chest/chest.html';">Dumbell</button>
+            <button type="submit"
+                onclick="window.location.href= 'http://127.0.0.1:5500/chest/chestSTR.html';">Streaching</button> -->
+
+
+
+        </div>
+    </header>
+    <h1>CHEST SECTION</h1>
+
+    <img src="static/img/chest.jpg" alt="chess img background" class="chest">
+
+    <div class="steps-list mb-2" style="margin: 4rem 0 1rem;">
+        <video  autoplay controls loop  src="static/videos/hindu_pushups.mp4">errorrr</video>
+       <div class="info">
+            <li>Lay flat on the bench with your feet on the ground. With straight arms unrack the bar.</li><br>
+            <li>Lower the bar to your mid chest</li><br>
+            <li>Raise the bar until you've locked your elbows.</li><br>
+            <li>Lorem ipsum dolor sit amet.</li>
+       </div>
+    </div>
+
+    <div class="steps-list mb-2" style="margin: 4rem 0 1rem;">
+        
+        <div class="info">
+            <li>Lay flat on the bench with your feet on the ground. With straight arms unrack the bar.</li><br>
+            <li>Lower the bar to your mid chest</li><br>
+            <li>Raise the bar until you've locked your elbows.</li><br>
+            <li>Lorem ipsum dolor sit amet.</li>
+        </div>
+        <video autoplay controls loop src="static/videos/pushups.mp4">errorrr</video>
+    </div>
+
+    <div class="steps-list mb-2" style="margin: 4rem 0 1rem;">
+        <video autoplay controls loop src="static/videos/inclinepushups.mp4">errorrr</video>
+        <div class="info">
+            <li>Lay flat on the bench with your feet on the ground. With straight arms unrack the bar.</li><br>
+            <li>Lower the bar to your mid chest</li><br>
+            <li>Raise the bar until you've locked your elbows.</li><br>
+            <li>Lorem ipsum dolor sit amet.</li>
+        </div>
+       
+    </div>
+
+    <div class="steps-list mb-2" style="margin: 4rem 0 1rem;">
+        <div class="info">
+            <li>Lay flat on the bench with your feet on the ground. With straight arms unrack the bar.</li><br>
+            <li>Lower the bar to your mid chest</li><br>
+            <li>Raise the bar until you've locked your elbows.</li><br>
+            <li>Lorem ipsum dolor sit amet.</li>
+        </div>
+        <video autoplay controls loop src="static/videos/declinepushups.mp4">errorrr</video>
+
+    </div>
+
+  
+
+
+
+</body>
+
+</html>
+{%endblock%}

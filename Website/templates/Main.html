@@ -1,0 +1,202 @@
+{% extends "index.html" %} {% block title %}Home{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {%block content%}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script defer type="text/javascript" src="{{url_for('static', filename='BMI.js')}}"></script>
+</head>
+
+<body>
+    <header>
+        <section class="home">
+            <div class="max-width">
+                <div class="home-content">
+                    <h3>We'll help you reach <br>your fitness goals.</h3>
+                    <button onclick="scrollWin()"class="btn">Get started</button>
+                </div>
+            </div>
+        </section>
+    </header>
+    <div class="content">
+        <div class="container">
+            <div class="text">
+                <h1>Why choose us?</h1>
+                <br>
+                <h3 class="secondary mb">State-of-the-Art Equipment: </h3>
+                <p>Elevate Your Workout Experience with State-of-the-Art Equipment: <br>Unleash your full potential with our cutting-edge fitness gear, <br>designed to push your limits and redefine your fitness journey.</p>
+                <br>
+                <h3 class="secondary mb">Expert Trainers: </h3>
+                <p>Empower Your Fitness Journey with Knowledgeable Instructors: <br>Our seasoned trainers are not just fitness experts; they are your partners in success. <br>Benefit from their expertise and embark on a transformative fitness adventure.
+
+                </p>
+
+            </div>
+            <div class="img">
+                <img src="static/img/model1.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="trainers">
+        <h2 class="primary mb">Our Professional Trainers</h2>
+        <div class="trainer">
+
+            <img src="static/img/arnold.jpg" alt="" width="400px" height="200px"/>
+            <br>
+            <h3 class="secondary mb">Arnold Schwarzaenegger</h3>
+            <p class="tertiary mb">
+                Certified trainer with an exprience of<br> 20 years and professional dietian.
+            </p>
+
+            <a href="#" class="btn-2">
+                <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+            </a>
+        </div>
+
+        <div class="trainer">
+            <img src="static/img/saket.jpg" alt="" width="350px" height="200px" />
+            <h3 class="secondary mb">Saket Gokhale</h3>
+            <p class="tertiary mb">
+                Personalised training and <br>variations among the exercises.
+            </p>
+            <a href="#" class="btn-2">
+                <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+            </a>
+        </div>
+        <div class="trainer">
+            <img src="static/img/cbum.jpg" alt="" width="400px" height="200px"/>
+            <h3 class="secondary mb">CBUM</h3>
+            <p class="tertiary mb">
+                One of the best trainer that <br>could transform your life.
+            </p>
+
+            <a href="#" class="btn-2">
+                <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+            </a>
+        </div>
+
+
+    </div>
+    <div class="sec">
+        <div class="BMI">
+            <div class="con">
+
+                <h1>BMI Calculator</h1>
+
+                <p>Height (in cm)</p>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Type here..." name="text" id="height" class="input">
+                </div>
+                <p>Weight (in kg)</p>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Type here..." name="text" id="weight" class="input">
+                </div>
+                <img src="static/img/BMI.png" alt="">
+
+                <button id="btn" class="btn1">Calculate</button>
+
+                <div id="result">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="section" id="testimonial">
+        <div class="container flex">
+            <div class="text">
+                <h2 class="primary">
+                    That's What Our Client Says
+                </h2>
+
+                <br />
+
+                <br />
+                <br />
+                <div class="client">
+                    <img src="../static/img/Profile.jpg" alt="" />
+                    <h2 class="secondary">Exelent Training</h2>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <p class="tertiary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+                        quas voluptatem ad, repudiandae voluptates odio deleniti
+                        reiciendis in veniam quidem expedita maxime error fugit. Pariatur
+                        quasi sunt aut id. Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Neque, officiis.
+                    </p>
+                </div>
+                <div class="client2">
+                    <img src="../static/img/Profile.jpg" alt="" />
+                    <h2 class="secondary">Exelent Training</h2>
+                    <div class="rating2">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <p class="tertiary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+                        quas voluptatem ad, repudiandae voluptates odio deleniti
+                        reiciendis in veniam quidem expedita maxime error fugit. Pariatur
+                        quasi sunt aut id. Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Neque, officiis.
+                    </p>
+                </div>
+            </div>
+            <div class="visual">
+                <!-- <img
+              src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/testimonial.png"
+              alt=""
+            /> -->
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Web design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Hosting</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>Infinity</h3>
+                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula
+                        rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel
+                        in justo.</p>
+                </div>
+                <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                            class="icon ion-social-twitter"></i></a><a href="#"><i
+                            class="icon ion-social-snapchat"></i></a><a href="#"><i
+                            class="icon ion-social-instagram"></i></a></div>
+            </div>
+            <p class="copyright">Company Name © 2018</p>
+        </div>
+    </footer>
+</div>
+    {% endblock %}
+</body>
+
+</html>

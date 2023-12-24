@@ -1,0 +1,70 @@
+{% extends "index.html" %} {% block title %}Chest{% endblock %}
+<!DOCTYPE html>
+<html>
+
+{%block content%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOREARMS WORKOUT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='forearm.css') }}">
+</head>
+<body>
+    <header><div class="menu">
+        <!-- <button type="submit" onclick="window.location.href= 'http://127.0.0.1:5500/forearms/forearmsBODY.html';">Body</button>
+        <button type="submit" onclick="window.location.href= 'http://127.0.0.1:5500/forearms/forearms.html';">Dumbell</button>
+        <button type="submit" onclick="window.location.href= 'http://127.0.0.1:5500/forearms/forearmsSTR.html';">Streaching</button> -->
+        
+    </div></header>
+    <h1>FOREARMS SECTION</h1>
+
+    <img src="static/img/forearms_BGG.jpeg" alt="chess img background" class="chest">
+    <h1>Machines/Barbells</h1>
+
+    <div class="steps-list mb-2" style="margin: 4rem 0 1rem;">
+        <video autoplay controls src="static/videos/sorearms_ex1.mp4">errorrr</video>
+       <div class="info">
+            <li>Lay flat on the bench with your feet on the ground. With straight arms unrack the bar.</li><br>
+            <li>Lower the bar to your mid chest</li><br>
+            <li>Raise the bar until you've locked your elbows.</li><br>
+            <li>Lorem ipsum dolor sit amet.</li>
+       </div>
+    </div>
+
+    <div class="steps-list mb-2" style="margin: 4rem 0 1rem;">
+        <div class="info">
+            <li>Lay flat on the bench with your feet on the ground. With straight arms unrack the bar.</li><br>
+            <li>Lower the bar to your mid chest</li><br>
+            <li>Raise the bar until you've locked your elbows.</li><br>
+            <li>Lorem ipsum dolor sit amet.</li>
+        </div>
+        <video autoplay controls src="static/videos/good4arm.mp4">errorrr</video>
+    </div>
+
+    <div class="steps-list mb-2" style="margin: 4rem 0 1rem;">
+        <video autoplay controls src="static/videos/forearmsEX4.mp4">errorrr</video>
+       <div class="info">
+            <li>Lay flat on the bench with your feet on the ground. With straight arms unrack the bar.</li><br>
+            <li>Lower the bar to your mid chest</li><br>
+            <li>Raise the bar until you've locked your elbows.</li><br>
+            <li>Lorem ipsum dolor sit amet.</li>
+       </div>
+    </div>
+    <h1>Streching</h1>
+    <div class="steps-list mb-2" style="margin: 4rem 0 1rem;">
+        <video autoplay controls src="static/videos/fore_str.mp4">errorrr</video>
+       <div class="info">
+            <li>Lay flat on the bench with your feet on the ground. With straight arms unrack the bar.</li><br>
+            <li>Lower the bar to your mid chest</li><br>
+            <li>Raise the bar until you've locked your elbows.</li><br>
+            <li>Lorem ipsum dolor sit amet.</li>
+       </div>
+    </div>
+
+    
+    
+    
+</body>
+</html>
+{%endblock%}
