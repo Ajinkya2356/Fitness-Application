@@ -1,0 +1,57 @@
+
+
+
+.container{
+    color:rgb(10, 10, 10);
+    height:auto;
+    width:100%;
+    /* border:2px solid black; */
+    margin-top:7%;
+    background-color: white;
+    border-radius:10px;
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none;
+    margin-bottom:5%;
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 17px
+}
+#file{
+    display:none;
+}
+#lfile{
+    margin-top:5%;
+    background-color: aqua;
+    border:none;
+    border-radius: 10px;
+    width:150px;
+    margin-bottom:5%;
+}
